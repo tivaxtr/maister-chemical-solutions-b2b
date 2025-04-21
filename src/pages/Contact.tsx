@@ -221,7 +221,7 @@ const Contact = () => {
                       <Mail className="w-6 h-6 text-primary mt-1 mr-4" />
                       <div>
                         <h3 className="font-medium">E-posta Adresimiz</h3>
-                        <p className="text-gray-600">info@beijchemicals.com</p>
+                        <p className="text-gray-600">info@bej.com.tr</p>
                       </div>
                     </div>
                     
@@ -229,7 +229,7 @@ const Contact = () => {
                       <Phone className="w-6 h-6 text-primary mt-1 mr-4" />
                       <div>
                         <h3 className="font-medium">Telefon Numaramız</h3>
-                        <p className="text-gray-600">+90 (532) 131 95 95</p>
+                        <p className="text-gray-600">0224 411 15 68</p>
                       </div>
                     </div>
                     
@@ -238,8 +238,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-medium">Adresimiz</h3>
                         <p className="text-gray-600">
-                          Cumhuriyet Mah. Okul Cad. No:40 İç Kapı No:2<br />
-                          Kartal, İstanbul, Türkiye
+                          Minareliçavuş OSB, Sanayi Bölgesi, Meşe Cd. No:12/B, 16140 Ni̇lüfer/Bursa
                         </p>
                       </div>
                     </div>

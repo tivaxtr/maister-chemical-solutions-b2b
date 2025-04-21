@@ -14,11 +14,11 @@ const Footer = () => {
             </p>
             <div className="flex items-center mt-4">
               <Mail className="h-5 w-5 mr-2" />
-              <span>info@beijchemicals.com</span>
+              <span>info@bej.com.tr</span>
             </div>
             <div className="flex items-center mt-2">
               <Phone className="h-5 w-5 mr-2" />
-              <span>+90 (532) 131 95 95</span>
+              <span>0224 411 15 68</span>
             </div>
           </div>
           
