@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from "../components/ui/navbar";
 import Footer from "../components/layout/Footer";
@@ -69,12 +70,12 @@ const About = () => {
                   Vizyonumuz: Kimyasal ürünler sektöründe sürdürülebilir üretim anlayışıyla, ulusal ve uluslararası alanda güvenilir bir marka olmak.
                 </p>
                 <p className="text-lg text-muted-foreground">
-                  “Ortak Geleceğimiz” için iş sağlığı ve güvenliği ile doğa dostu ve çevreci ürünlerin üretilmesi konusunda gelişen teknolojileri takip edip, maksimum düzeyde iştirak ederek devam edeceğiz.
+                  "Ortak Geleceğimiz" için iş sağlığı ve güvenliği ile doğa dostu ve çevreci ürünlerin üretilmesi konusunda gelişen teknolojileri takip edip, maksimum düzeyde iştirak ederek devam edeceğiz.
                 </p>
               </div>
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="/public/lovable-uploads/94fe424a-b19a-48d0-a80f-a30f18ec0612.png" 
+                  src="/lovable-uploads/94fe424a-b19a-48d0-a80f-a30f18ec0612.png" 
                   alt="BEJ Kimya CEO" 
                   className="w-full h-full object-cover"
                 />
@@ -96,7 +97,7 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <img 
-                  src="/public/lovable-uploads/94fe424a-b19a-48d0-a80f-a30f18ec0612.png"
+                  src="/lovable-uploads/94fe424a-b19a-48d0-a80f-a30f18ec0612.png"
                   alt="Meral Altuntaş" 
                   className="w-full h-64 object-cover"
                 />
@@ -111,7 +112,7 @@ const About = () => {
               
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <img 
-                  src="/public/lovable-uploads/f814cd5d-2f09-41fc-bae1-71fb321843c9.png"
+                  src="/lovable-uploads/c7b45c44-2fad-4af8-92ba-4f3a835504cb.png"
                   alt="Yunus Torun" 
                   className="w-full h-64 object-cover"
                 />
@@ -126,7 +127,7 @@ const About = () => {
               
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <img 
-                  src="/public/lovable-uploads/c7b45c44-2fad-4af8-92ba-4f3a835504cb.png"
+                  src="/lovable-uploads/f814cd5d-2f09-41fc-bae1-71fb321843c9.png"
                   alt="Ömür Can Ayhan" 
                   className="w-full h-64 object-cover"
                 />
@@ -141,7 +142,7 @@ const About = () => {
 
               <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 <img 
-                  src="/public/lovable-uploads/0d0bbd82-51d2-4917-90cb-425ba0eb9a4a.png"
+                  src="/lovable-uploads/0d0bbd82-51d2-4917-90cb-425ba0eb9a4a.png"
                   alt="Yusuf Yuzar" 
                   className="w-full h-64 object-cover"
                 />
@@ -216,3 +217,4 @@ const About = () => {
 };
 
 export default About;
+
