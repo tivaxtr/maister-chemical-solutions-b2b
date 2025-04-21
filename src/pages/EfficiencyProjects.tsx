@@ -1,4 +1,3 @@
-
 import Navbar from "../components/ui/navbar";
 import Footer from "../components/layout/Footer";
 import ContactCTA from "../components/home/ContactCTA";
@@ -78,42 +77,52 @@ const EfficiencyProjects = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4">Maliyet Tasarrufu</h3>
-                <p className="text-muted-foreground">
-                  Daha verimli kimyasal formülasyonlar ve optimize edilmiş süreçler sayesinde üretim maliyetlerinizi önemli ölçüde azaltın.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4">Kaynak Optimizasyonu</h3>
-                <p className="text-muted-foreground">
-                  Su, enerji ve hammadde kullanımında tasarruf sağlayan çözümlerle kaynaklarınızı daha verimli kullanın.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4">Üretim Verimliliği</h3>
-                <p className="text-muted-foreground">
-                  Daha etkili kimyasal çözümlerle üretim süreçlerinizi hızlandırın ve kapasitenizi artırın.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4">Ürün Kalitesinde Artış</h3>
-                <p className="text-muted-foreground">
-                  Yüksek performanslı kimyasal çözümler sayesinde son ürün kalitenizi yükseltin ve müşteri memnuniyetini artırın.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4">Çevresel Sürdürülebilirlik</h3>
-                <p className="text-muted-foreground">
-                  Daha az kaynak tüketen, çevre dostu formüller ile sürdürülebilirlik hedeflerinize ulaşın ve kurumsal itibarınızı güçlendirin.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4">Rekabet Avantajı</h3>
-                <p className="text-muted-foreground">
-                  Düşük maliyetler ve yüksek kalite sayesinde pazarda rekabet avantajı elde edin ve karlılığınızı artırın.
-                </p>
-              </div>
+              {[
+                {
+                  title: "Maliyet Tasarrufu",
+                  desc: "Verimli kimyasal formülasyonlar ve optimize süreçlerle üretim maliyetlerinizi önemli ölçüde azaltın.",
+                  color: "from-green-400 to-green-600",
+                  icon: "💸"
+                },
+                {
+                  title: "Kaynak Optimizasyonu",
+                  desc: "Su, enerji ve hammadde kullanımında tasarruf sağlayan çözümlerle kaynaklarınızı daha verimli kullanın.",
+                  color: "from-blue-400 to-blue-600",
+                  icon: "💧"
+                },
+                {
+                  title: "Üretim Verimliliği",
+                  desc: "Daha etkili kimyasal çözümlerle üretim süreçlerinizi hızlandırın ve kapasitenizi artırın.",
+                  color: "from-yellow-400 to-yellow-600",
+                  icon: "⚡"
+                },
+                {
+                  title: "Ürün Kalitesinde Artış",
+                  desc: "Yüksek performanslı kimyasal çözümler sayesinde son ürün kalitenizi yükseltin ve müşteri memnuniyetini artırın.",
+                  color: "from-purple-400 to-indigo-500",
+                  icon: "🏆"
+                },
+                {
+                  title: "Çevresel Sürdürülebilirlik",
+                  desc: "Daha az kaynak tüketen, çevre dostu formüller ile sürdürülebilirlik hedeflerinize ulaşın ve kurumsal itibarınızı güçlendirin.",
+                  color: "from-emerald-400 to-emerald-600",
+                  icon: "🌱"
+                },
+                {
+                  title: "Rekabet Avantajı",
+                  desc: "Düşük maliyetler ve yüksek kalite sayesinde pazarda rekabet avantajı elde edin ve karlılığınızı artırın.",
+                  color: "from-pink-400 to-pink-600",
+                  icon: "🚀"
+                }
+              ].map((item, idx) => (
+                <div key={idx} className={`relative group bg-gradient-to-br ${item.color} p-1 rounded-2xl shadow-lg transition-transform hover:scale-105`}>
+                  <div className="bg-white rounded-2xl h-full p-7 flex flex-col items-center text-center">
+                    <div className="mb-4 text-4xl md:text-5xl drop-shadow-lg group-hover:scale-110 transition-transform">{item.icon}</div>
+                    <h3 className="text-lg font-bold mb-2 text-primary group-hover:text-accent transition-colors">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -129,110 +138,121 @@ const EfficiencyProjects = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-border">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Endüstriyel Temizlik Optimizasyonu</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Üretim hatlarının ve endüstriyel ekipmanların temizliğinde kullanılan kimyasalları optimize ederek, zaman, su ve enerji tasarrufu sağlayan projeler.
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Temizlik sürelerinde %40'a varan azalma</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Su tüketiminde %30'a varan tasarruf</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Ekipman ve hat performansında artış</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Daha uzun ekipman ömrü</span>
-                    </li>
-                  </ul>
+              {[
+                {
+                  title: "Endüstriyel Temizlik Optimizasyonu",
+                  desc: "Üretim hatları ve endüstriyel ekipmanlar için özel kimyasal çözümlerle temizlik süreçlerini hızlandırır, su ve enerji tasarrufu sağlar.",
+                  color: "from-primary/80 to-accent/80",
+                  items: [
+                    {
+                      name: "Temizlik Sürelerinde Azalma",
+                      info: "Optimize kimyasal formüllerle temizlik sürelerinde %40'a varan azalma. Daha kısa temizlik, daha uzun üretim süresi demektir."
+                    },
+                    {
+                      name: "Su Tüketiminde Tasarruf",
+                      info: "Yüksek verimli temizlik kimyasalları ile su tüketiminde %30'a varan tasarruf. Çevre dostu ve ekonomik bir yaklaşım."
+                    },
+                    {
+                      name: "Ekipman Performansında Artış",
+                      info: "Düzenli ve etkili temizlik, ekipman ve hat performansını artırır, arıza riskini azaltır."
+                    },
+                    {
+                      name: "Daha Uzun Ekipman Ömrü",
+                      info: "Korozyon ve birikinti önleyici çözümlerle ekipmanlarınızın ömrünü uzatın, bakım maliyetlerinizi düşürün."
+                    }
+                  ]
+                },
+                {
+                  title: "Su Yönetimi Çözümleri",
+                  desc: "Endüstriyel süreçlerde su kullanımını azaltan, arıtma maliyetlerini düşüren ve atık suların yeniden kullanımını sağlayan projeler.",
+                  color: "from-blue-400 to-blue-600",
+                  items: [
+                    {
+                      name: "Su Tüketiminde Azalma",
+                      info: "Proses optimizasyonu ve özel kimyasallar ile su tüketiminde %25-45 arasında azalma sağlanır."
+                    },
+                    {
+                      name: "Arıtma Kimyasallarında Tasarruf",
+                      info: "Daha az kimyasal kullanımı ile arıtma maliyetlerinde düşüş ve çevreye daha az yük."
+                    },
+                    {
+                      name: "Atık Su Maliyetlerinde Düşüş",
+                      info: "Atık suyun yeniden kullanımı ve azaltılması ile işletme giderlerinde önemli tasarruf."
+                    },
+                    {
+                      name: "Sürdürülebilirlik Hedeflerine Katkı",
+                      info: "Su yönetimi projeleri ile sürdürülebilirlik ve çevre standartlarına uyum sağlanır."
+                    }
+                  ]
+                },
+                {
+                  title: "Enerji Verimliliği Çözümleri",
+                  desc: "Isıtma, soğutma ve enerji yoğun süreçlerde kullanılan özel kimyasallarla enerji tüketimini azaltan projeler.",
+                  color: "from-amber-400 to-orange-500",
+                  items: [
+                    {
+                      name: "Verimlilik Artışı",
+                      info: "Kazan ve soğutma sistemlerinde verimlilik artışı, daha az enerjiyle daha fazla üretim."
+                    },
+                    {
+                      name: "Isı Transferinde İyileşme",
+                      info: "Isı transfer yüzeylerinde birikinti oluşumunu önleyerek enerji kayıplarını minimize eder."
+                    },
+                    {
+                      name: "Bakım Maliyetlerinde Düşüş",
+                      info: "Daha az arıza ve bakım ihtiyacı ile operasyonel maliyetlerde azalma."
+                    },
+                    {
+                      name: "Karbon Ayak İzinde Azalma",
+                      info: "Enerji tasarrufu ile karbon salınımını azaltarak çevreye katkı sağlar."
+                    }
+                  ]
+                },
+                {
+                  title: "Üretim Süreci İyileştirme",
+                  desc: "Üretim süreçlerinin kimyasal aşamalarını optimize ederek, hammadde kullanımını azaltan ve üretim verimini artıran projeler.",
+                  color: "from-pink-400 to-yellow-400",
+                  items: [
+                    {
+                      name: "Hammadde Kullanımında Tasarruf",
+                      info: "Kimyasal optimizasyon ile hammadde kullanımında %15-25 tasarruf sağlanır."
+                    },
+                    {
+                      name: "Üretim Kapasitesinde Artış",
+                      info: "Daha verimli prosesler ile üretim kapasiteniz yükselir, rekabet gücünüz artar."
+                    },
+                    {
+                      name: "Atık Miktarında Azalma",
+                      info: "Daha az atık ile hem çevreye hem de işletme bütçenize katkı."
+                    },
+                    {
+                      name: "Ürün Kalitesinde İyileşme",
+                      info: "Optimize kimyasal süreçlerle son ürün kalitesinde gözle görülür artış."
+                    }
+                  ]
+                }
+              ].map((cat, idx) => (
+                <div key={idx} className={`relative group bg-gradient-to-br ${cat.color} p-1 rounded-2xl shadow-lg transition-transform hover:scale-105`}>
+                  <div className="bg-white rounded-2xl h-full p-7">
+                    <h3 className="text-2xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">{cat.title}</h3>
+                    <p className="text-muted-foreground mb-4 text-sm">{cat.desc}</p>
+                    <ul className="space-y-2">
+                      {cat.items.map((item, i) => (
+                        <li key={i} className="relative group">
+                          <details className="cursor-pointer">
+                            <summary className="flex items-center text-primary font-semibold hover:underline focus:outline-none">
+                              <span className="mr-2">•</span>{item.name}
+                            </summary>
+                            <div className="ml-6 mt-1 text-muted-foreground text-xs bg-accent/10 rounded p-2 shadow-inner animate-fade-in">
+                              {item.info}
+                            </div>
+                          </details>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-border">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Su Yönetimi Çözümleri</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Endüstriyel süreçlerde su kullanımını azaltan, arıtma maliyetlerini düşüren ve atık suların yeniden kullanımını sağlayan kimyasal çözümler.
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Su tüketiminde %25-45 arasında azalma</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Arıtma kimyasallarında tasarruf</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Atık su maliyetlerinde düşüş</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Sürdürülebilirlik hedeflerine katkı</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-border">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Enerji Verimliliği Çözümleri</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Isıtma, soğutma ve diğer enerji yoğun süreçlerde kullanılan özel kimyasallarla enerji tüketimini azaltan projeler.
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Kazan ve soğutma sistemlerinde verimlilik artışı</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Isı transferinde iyileşme</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Ekipman bakım maliyetlerinde düşüş</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Karbon ayak izinde azalma</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-border">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Üretim Süreci İyileştirme</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Üretim süreçlerinin kimyasal aşamalarını optimize ederek, hammadde kullanımını azaltan ve üretim verimini artıran projeler.
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Hammadde kullanımında %15-25 tasarruf</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Üretim kapasitesinde artış</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Atık miktarında azalma</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Ürün kalitesinde iyileşme</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -334,39 +354,68 @@ const EfficiencyProjects = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <p className="text-lg font-semibold text-primary mb-2">Tekstil Sektörü</p>
-                <h3 className="text-2xl font-bold mb-4">%35 Su Tasarrufu</h3>
-                <p className="text-muted-foreground mb-6">
-                  Öncü bir tekstil firması için geliştirdiğimiz özel boyama kimyasalları ile su tüketimini %35 azalttık ve enerji maliyetlerini düşürdük.
-                </p>
-                <div className="border-t border-border pt-4 text-sm text-muted-foreground">
-                  <p>"Maister'in geliştirdiği kimyasal çözümler sayesinde sadece maliyetlerimizi düşürmekle kalmadık, sürdürülebilirlik hedeflerimize de bir adım daha yaklaştık."</p>
-                  <p className="font-medium mt-2">- Aylin Demir, Üretim Müdürü</p>
+              {[
+                {
+                  sector: "Tekstil Sektörü",
+                  title: "%35 Su Tasarrufu",
+                  desc: "Öncü bir tekstil firması için geliştirdiğimiz özel boyama kimyasalları ile su tüketimini %35 azalttık ve enerji maliyetlerini düşürdük.",
+                  color: "from-blue-400 to-blue-600",
+                  quote: "Maister'in geliştirdiği kimyasal çözümler sayesinde sadece maliyetlerimizi düşürmekle kalmadık, sürdürülebilirlik hedeflerimize de bir adım daha yaklaştık.",
+                  author: "Aylin Demir, Üretim Müdürü"
+                },
+                {
+                  sector: "Gıda İmalatı",
+                  title: "%40 Temizlik Süresi Azalması",
+                  desc: "Bir gıda üreticisi için özel formüle ettiğimiz CIP (Cleaning-in-Place) kimyasalları ile temizlik sürelerini %40 azalttık ve üretim kapasitesini artırdık.",
+                  color: "from-green-400 to-green-600",
+                  quote: "Temizlik sürelerindeki azalma sayesinde üretim kapasitemizi %15 artırdık. Maister ekibinin profesyonel yaklaşımı süreç boyunca bize güven verdi.",
+                  author: "Mehmet Yılmaz, Operasyon Direktörü"
+                },
+                {
+                  sector: "Metal İşleme",
+                  title: "%20 Enerji Tasarrufu",
+                  desc: "Metal işleme tesisi için geliştirdiğimiz koruyucu kimyasallar ile ekipman ömrünü uzattık ve enerji tüketimini %20 azalttık.",
+                  color: "from-amber-400 to-orange-500",
+                  quote: "Ekipmanlarımızın performansındaki artış ve enerji tasarrufu, operasyonel maliyetlerimizi önemli ölçüde düşürdü. Maister ile çalışmaya devam edeceğiz.",
+                  author: "Ali Kaya, Teknik Müdür"
+                },
+                {
+                  sector: "Otomotiv Sektörü",
+                  title: "%25 Bakım Maliyeti Azalması",
+                  desc: "Otomotiv üreticisi için uygulanan özel temizlik ve koruyucu kimyasallar ile bakım maliyetlerinde %25 azalma sağlandı.",
+                  color: "from-pink-400 to-yellow-400",
+                  quote: "Bakım aralıklarımız uzadı, üretim kayıplarımız azaldı. Maister'in uzmanlığına güveniyoruz.",
+                  author: "Serkan Usta, Bakım Şefi"
+                },
+                {
+                  sector: "Enerji Sektörü",
+                  title: "%18 Enerji Verimliliği Artışı",
+                  desc: "Enerji santralinde uygulanan proses kimyasalları ile enerji verimliliğinde %18 artış elde edildi.",
+                  color: "from-emerald-400 to-emerald-600",
+                  quote: "Enerji maliyetlerimizdeki düşüş ve sistem güvenliği için Maister'i tercih ettik.",
+                  author: "Gökhan Yıldız, Enerji Yöneticisi"
+                },
+                {
+                  sector: "Gıda & İçecek",
+                  title: "%30 Atık Azalması",
+                  desc: "Gıda ve içecek fabrikasında atık yönetimi projesiyle atık miktarı %30 azaltıldı, çevreye duyarlı üretim sağlandı.",
+                  color: "from-purple-400 to-indigo-500",
+                  quote: "Çevreye duyarlı üretim hedeflerimize Maister ile ulaştık. Atıklarımızı ciddi oranda azalttık.",
+                  author: "Derya Aksoy, Fabrika Müdürü"
+                }
+              ].map((item, idx) => (
+                <div key={idx} className={`relative group bg-gradient-to-br ${item.color} p-1 rounded-2xl shadow-lg transition-transform hover:scale-105`}>
+                  <div className="bg-white rounded-2xl h-full p-7 flex flex-col">
+                    <p className="text-lg font-semibold text-primary mb-2">{item.sector}</p>
+                    <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+                    <p className="text-muted-foreground mb-4 text-sm">{item.desc}</p>
+                    <div className="border-t border-border pt-4 text-sm text-muted-foreground italic">
+                      <p>"{item.quote}"</p>
+                      <p className="font-medium mt-2 not-italic text-primary">- {item.author}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <p className="text-lg font-semibold text-primary mb-2">Gıda İmalatı</p>
-                <h3 className="text-2xl font-bold mb-4">%40 Temizlik Süresi Azalması</h3>
-                <p className="text-muted-foreground mb-6">
-                  Bir gıda üreticisi için özel formüle ettiğimiz CIP (Cleaning-in-Place) kimyasalları ile temizlik sürelerini %40 azalttık ve üretim kapasitesini artırdık.
-                </p>
-                <div className="border-t border-border pt-4 text-sm text-muted-foreground">
-                  <p>"Temizlik sürelerindeki azalma sayesinde üretim kapasitemizi %15 artırdık. Maister ekibinin profesyonel yaklaşımı süreç boyunca bize güven verdi."</p>
-                  <p className="font-medium mt-2">- Mehmet Yılmaz, Operasyon Direktörü</p>
-                </div>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <p className="text-lg font-semibold text-primary mb-2">Metal İşleme</p>
-                <h3 className="text-2xl font-bold mb-4">%20 Enerji Tasarrufu</h3>
-                <p className="text-muted-foreground mb-6">
-                  Metal işleme tesisi için geliştirdiğimiz koruyucu kimyasallar ile ekipman ömrünü uzattık ve enerji tüketimini %20 azalttık.
-                </p>
-                <div className="border-t border-border pt-4 text-sm text-muted-foreground">
-                  <p>"Ekipmanlarımızın performansındaki artış ve enerji tasarrufu, operasyonel maliyetlerimizi önemli ölçüde düşürdü. Maister ile çalışmaya devam edeceğiz."</p>
-                  <p className="font-medium mt-2">- Ali Kaya, Teknik Müdür</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

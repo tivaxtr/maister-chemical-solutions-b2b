@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from "../components/ui/navbar";
 import Footer from "../components/layout/Footer";
@@ -10,8 +9,26 @@ const About = () => {
       <Navbar />
       <main className="flex-grow">
         {/* Hero Section */}
-        <div className="relative py-16 md:py-24 bg-primary overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
+        <div className="relative flex flex-col items-center justify-center text-center py-20 md:py-28 lg:py-32 bg-gradient-to-br from-primary/90 via-primary/60 to-accent/80 overflow-hidden">
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary/90 via-primary/60 to-accent/80 opacity-80 blur-[2px] z-0 animate-gradient-x" />
+          <div className="relative z-10 flex flex-col items-center">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight drop-shadow-lg animate-fade-in">
+              Hakkımızda
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-2xl mx-auto animate-fade-in delay-100">
+              İnovasyon ve kaliteyle, endüstriyel kimyada yeni standartlar belirliyoruz.<br/>
+              <span className="block mt-2 text-base text-white/80">Maister & BEJ Kimya</span>
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center animate-fade-in delay-200">
+              <span className="inline-flex items-center bg-accent text-white font-semibold px-5 py-2 rounded-full shadow hover:bg-accent/90 transition-colors">
+                Sürdürülebilirlik
+              </span>
+              <span className="inline-flex items-center bg-white/90 text-primary font-semibold px-5 py-2 rounded-full shadow hover:bg-primary/90 hover:text-white transition-colors">
+                Yenilikçi Çözümler
+              </span>
+            </div>
+          </div>
+          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none select-none">
             <svg
               className="h-full w-full"
               xmlns="http://www.w3.org/2000/svg"
@@ -31,14 +48,6 @@ const About = () => {
               <rect width="100%" height="100%" fill="url(#pattern)" />
             </svg>
           </div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Hakkımızda</h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                İnovasyon ve kaliteyi temel alarak endüstriyel kimya alanında yeni standartlar belirliyoruz.
-              </p>
-            </div>
-          </div>
         </div>
 
         {/* Our Story */}
@@ -46,21 +55,27 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Hikayemiz</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Maister & BEJ Kimya Hakkında</h2>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Maister Chemical Solutions, 2009 yılında Meral Altuntaş tarafından endüstriyel kimya alanında yenilikçi çözümler sunmak üzere kuruldu. İstanbul'da mütevazı bir laboratuvarda başlayan yolculuğumuz, bugün Türkiye'nin önde gelen endüstriyel kimya şirketlerinden biri olma başarısına ulaştı.
+                  Maister, BEJ KAUÇUK PLASTİK KİMYA SAN. VE TİC. A.Ş.'nin alt markasıdır. Şirketimiz 2009 yılından bu yana kimya sektöründe; Su Şartlandırma Kimyasalları, Yardımcı Tekstil Kimyasalları, Teknik Bakım ve Koruma Kimyasalları, Endüstriyel Temizlik Kimyasalları, Oto Bakım Ürünleri, Halı Yıkama Kimyasalları, Tutkallar ve Genel Kimyasallar alanında faaliyet göstermektedir.
                 </p>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Kuruluşumuzdan bu yana, sürdürülebilirlik ve inovasyon ilkelerini benimseyen Maister, çeşitli sektörlerdeki işletmelere özel kimyasal çözümler geliştirmeye odaklanmıştır. İlk yıllarda temizlik ürünleri alanında faaliyet gösteren şirketimiz, zamanla tekstil, otomotiv, gıda ve ilaç sektörlerine yönelik özelleştirilmiş kimyasal çözümler sunmaya başlamıştır.
+                  İnsan ve çevre sağlığını önceleyen, müşteri memnuniyetini ve sürdürülebilir yenilikçi çözümleri ilke edinmiş bir firmayız. Ürünlerimizin büyük kısmı kendi tesislerimizde üretilmekte, bazı özel ürünlerin tedarik ve satışı da gerçekleştirilmektedir.
+                </p>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Misyonumuz: Sektördeki bilgi birikimimizi yenilikçi üretim teknikleriyle birleştirerek, müşterilerimize yüksek kaliteli ve güvenilir ürünler sunmak.
+                </p>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Vizyonumuz: Kimyasal ürünler sektöründe sürdürülebilir üretim anlayışıyla, ulusal ve uluslararası alanda güvenilir bir marka olmak.
                 </p>
                 <p className="text-lg text-muted-foreground">
-                  2015 yılında mevcut tesisimize taşınarak üretim kapasitemizi artırdık ve Ar-Ge laboratuvarımızı kurduk. Bu yatırımlar, müşterilerimize daha kapsamlı ve özelleştirilmiş hizmetler sunmamıza olanak sağladı.
+                  “Ortak Geleceğimiz” için iş sağlığı ve güvenliği ile doğa dostu ve çevreci ürünlerin üretilmesi konusunda gelişen teknolojileri takip edip, maksimum düzeyde iştirak ederek devam edeceğiz.
                 </p>
               </div>
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
                   src="/public/lovable-uploads/94fe424a-b19a-48d0-a80f-a30f18ec0612.png" 
-                  alt="Maister Chemical Solutions CEO" 
+                  alt="BEJ Kimya CEO" 
                   className="w-full h-full object-cover"
                 />
               </div>

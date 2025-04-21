@@ -1,67 +1,48 @@
-
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
 const services = [
   {
-    title: "Özel Kimyasal Ürünler",
-    description: "Şirketinize özel rengi, kokusu ve etiketinde logonuz olan kimyasal çözümler geliştiriyoruz.",
-    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    link: "/custom-products"
+    title: "Su Şartlandırma Kimyasalları",
+    description: "Korozyon önleyici, biyosit, antiskalant ve proses suyu çözümleri."
   },
   {
-    title: "Verimlilik Projeleri",
-    description: "Şirketinizin verimliliğini ve karlılığını artırmak için özel kimyasal çözümler sunuyoruz.",
-    image: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    link: "/efficiency-projects"
+    title: "Tekstil Kimyasalları",
+    description: "Egalizatör, yumuşatıcı, yağ sökücü, antistatik ve leke sökücü ürünler."
   },
   {
-    title: "Private Label Projeleri",
-    description: "Kendi markanızla pazara sunabileceğiniz özel kimyasal ürünler üretiyoruz.",
-    image: "https://images.unsplash.com/photo-1602665742701-389671bc40c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    link: "/private-label"
+    title: "Endüstriyel Temizlik & Bakım",
+    description: "Yağ, gres, karbon, pas ve kireç sökücüler, hijyen ve bakım kimyasalları."
   },
   {
-    title: "Hammadde Satışları",
-    description: "Yüksek kaliteli kimyasal hammaddeleri rekabetçi fiyatlarla tedarik ediyoruz.",
-    image: "https://images.unsplash.com/photo-1602928301882-3ef98dc8399d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    link: "/raw-materials"
+    title: "Oto Bakım & Halı Yıkama",
+    description: "Oto bakım ürünleri, halı yıkama şampuanları, leke sökücüler ve parfümler."
+  },
+  {
+    title: "Tutkallar & Özel Kimyasallar",
+    description: "Mobilya tutkalları, hızlı yapıştırıcılar, panel temizleyiciler ve daha fazlası."
+  },
+  {
+    title: "Endüstriyel Kimyasallar & Yağlar",
+    description: "MEG, asitler, solventler, yağlar, gresler ve katkı maddeleri."
   }
 ];
 
 const Services = () => {
   return (
-    <section className="py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Profesyonel Kimyasal Çözümlerimiz
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            İşletmenizi bir adım ileri taşıyacak özel kimyasal çözümlerimizi keşfedin.
+    <section className="py-12 md:py-16 bg-secondary/60">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-2 tracking-tight">Profesyonel Kimyasal Çözümlerimiz</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Sektörel ihtiyaçlara özel, yenilikçi ve güvenilir kimyasal ürün gruplarımız.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-              <img 
-                src={service.image} 
-                alt={service.title} 
-                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
-                <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                <p className="text-white/90 mb-4 line-clamp-2">{service.description}</p>
-                <Link 
-                  to={service.link} 
-                  className="inline-flex items-center text-white hover:text-accent transition-colors"
-                >
-                  <span>Daha Fazla Bilgi</span>
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {services.map((service, idx) => (
+            <div key={idx} className="rounded-xl bg-white/90 border border-primary/10 shadow-sm p-6 flex flex-col items-start hover:shadow-lg transition-shadow h-full">
+              <div className="flex items-center mb-2">
+                <span className="inline-block w-2 h-2 rounded-full bg-primary mr-3 animate-pulse"></span>
+                <h3 className="text-lg font-semibold text-primary mb-0">{service.title}</h3>
               </div>
+              <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>

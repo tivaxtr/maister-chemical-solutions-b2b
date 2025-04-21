@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
 
@@ -9,8 +8,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">MAISTER Chemical Solutions</h3>
+            <p className="mb-2 text-sm font-semibold">Maister, BEJ KAUÇUK PLASTİK KİMYA SAN. VE TİC. A.Ş.'nin alt markasıdır.</p>
             <p className="mb-4">
-              Şirketlere özel kimyasal çözümler sunarak verimliliği ve karlılığı artırıyoruz.
+              Kimyanın Evrensel Diliyle Yanınızdayız. Siz İsteyin Biz Çözüm Üretelim...
             </p>
             <div className="flex items-center mt-4">
               <Mail className="h-5 w-5 mr-2" />
@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center mt-2">
               <Phone className="h-5 w-5 mr-2" />
-              <span>0224 411 15 68</span>
+              <span>(224) 411 15 68</span>
             </div>
           </div>
           
@@ -55,8 +55,8 @@ const Footer = () => {
               Endüstriyel kimya konusunda uzman çözüm ortağınız. İnovasyon ve kalite odaklı çözümler.
             </p>
             <p>
-              Adres: Cumhuriyet Mah. Okul Cad. No:40 İç Kapı No:2 <br />
-              Kartal, İstanbul, Türkiye
+              Adres: Minareliçavuş OSB, Sanayi Bölgesi, Meşe Cd. No:12/B, 16140 Nilüfer/Bursa<br/>
+              Web: www.bej.com.tr
             </p>
           </div>
         </div>

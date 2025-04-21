@@ -275,7 +275,7 @@ const Contact = () => {
               <h2 className="text-2xl font-bold mb-6">Konum</h2>
               <div className="h-96 rounded-lg overflow-hidden">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.9656220632844!2d29.004661115246654!3d41.07747687929477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab63f6f8fffff%3A0x37e5dac4eb77d5e5!2sMaslak%2C%20B%C3%BCy%C3%BCkdere%20Cd.%2C%2034398%20Sar%C4%B1yer%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1650011390000!5m2!1str!2str"
+                  src="https://www.google.com/maps?q=Minareliçavuş%20OSB%2C%20Sanayi%20Bölgesi%2C%20Meşe%20Cd.%20No%3A12%2FB%2C%2016140%20Nilüfer%2FBursa&output=embed"
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 

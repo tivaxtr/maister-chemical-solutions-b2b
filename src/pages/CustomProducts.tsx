@@ -1,4 +1,3 @@
-
 import Navbar from "../components/ui/navbar";
 import Footer from "../components/layout/Footer";
 import ContactCTA from "../components/home/ContactCTA";
@@ -78,42 +77,52 @@ const CustomProducts = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4">Marka Kimliği</h3>
-                <p className="text-muted-foreground">
-                  Şirketinizin logosunu taşıyan, kurumsal renklerinizle uyumlu ürünlerle marka bilinirliğinizi artırın. Her kimyasal ürün, markanızın bir elçisi haline gelir.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4">Özel Formülasyon</h3>
-                <p className="text-muted-foreground">
-                  İşletmenizin spesifik ihtiyaçlarına göre formüle edilmiş, maksimum performans sağlayan kimyasal çözümler. Standart ürünlerin sağlayamadığı etkinlikte sonuçlar elde edin.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4">Benzersiz Koku ve Renk</h3>
-                <p className="text-muted-foreground">
-                  Markanıza özel geliştirilmiş kokular ve renklerle, çalışanlarınız ve müşterileriniz üzerinde olumlu etki bırakın. Duyusal deneyim, markanızın hatırlanabilirliğini artırır.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4">Rekabet Avantajı</h3>
-                <p className="text-muted-foreground">
-                  Rakiplerinizin sunmadığı, benzersiz özelliklere sahip ürünlerle pazarda öne çıkın. Özel formüller sayesinde daha iyi sonuçlar alın ve müşteri memnuniyetini artırın.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4">Maliyet Optimizasyonu</h3>
-                <p className="text-muted-foreground">
-                  İhtiyaçlarınıza göre özelleştirilmiş formüller sayesinde gereksiz maliyetlerden kurtulun. İşletmenizin ihtiyaçlarına tam olarak uyan, israfı önleyen çözümler.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4">Profesyonel İmaj</h3>
-                <p className="text-muted-foreground">
-                  Markalı, özel ürünlerinizle profesyonel bir görüntü oluşturun. Bu detay, müşterilerinizin ve iş ortaklarınızın işletmenizi nasıl algıladığını olumlu yönde etkiler.
-                </p>
-              </div>
+              {[
+                {
+                  title: "Marka Kimliği",
+                  desc: "Şirketinizin logosunu taşıyan, kurumsal renklerinizle uyumlu ürünlerle marka bilinirliğinizi artırın. Her kimyasal ürün, markanızın bir elçisi haline gelir.",
+                  color: "from-primary/80 to-accent/80",
+                  icon: "🏷️"
+                },
+                {
+                  title: "Özel Formülasyon",
+                  desc: "İşletmenizin spesifik ihtiyaçlarına göre formüle edilmiş, maksimum performans sağlayan kimyasal çözümler. Standart ürünlerin sağlayamadığı etkinlikte sonuçlar elde edin.",
+                  color: "from-green-400 to-green-600",
+                  icon: "🧪"
+                },
+                {
+                  title: "Benzersiz Koku ve Renk",
+                  desc: "Markanıza özel geliştirilmiş kokular ve renklerle, çalışanlarınız ve müşterileriniz üzerinde olumlu etki bırakın. Duyusal deneyim, markanızın hatırlanabilirliğini artırır.",
+                  color: "from-pink-400 to-yellow-400",
+                  icon: "🌈"
+                },
+                {
+                  title: "Rekabet Avantajı",
+                  desc: "Rakiplerinizin sunmadığı, benzersiz özelliklere sahip ürünlerle pazarda öne çıkın. Özel formüller sayesinde daha iyi sonuçlar alın ve müşteri memnuniyetini artırın.",
+                  color: "from-blue-400 to-blue-600",
+                  icon: "🚀"
+                },
+                {
+                  title: "Maliyet Optimizasyonu",
+                  desc: "İhtiyaçlarınıza göre özelleştirilmiş formüller sayesinde gereksiz maliyetlerden kurtulun. İşletmenizin ihtiyaçlarına tam olarak uyan, israfı önleyen çözümler.",
+                  color: "from-amber-400 to-orange-500",
+                  icon: "💸"
+                },
+                {
+                  title: "Profesyonel İmaj",
+                  desc: "Markalı, özel ürünlerinizle profesyonel bir görüntü oluşturun. Bu detay, müşterilerinizin ve iş ortaklarınızın işletmenizi nasıl algıladığını olumlu yönde etkiler.",
+                  color: "from-purple-400 to-indigo-500",
+                  icon: "🎩"
+                }
+              ].map((item, idx) => (
+                <div key={idx} className={`relative group bg-gradient-to-br ${item.color} p-1 rounded-2xl shadow-lg transition-transform hover:scale-105`}>
+                  <div className="bg-white rounded-2xl h-full p-7 flex flex-col items-center text-center">
+                    <div className="mb-4 text-4xl md:text-5xl drop-shadow-lg group-hover:scale-110 transition-transform">{item.icon}</div>
+                    <h3 className="text-lg font-bold mb-2 text-primary group-hover:text-accent transition-colors">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -129,110 +138,121 @@ const CustomProducts = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-border">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Endüstriyel Temizleyiciler</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Üretim tesisleri, atölyeler ve endüstriyel alanlar için özel formüle edilmiş, yüksek performanslı temizlik çözümleri. Yağ, gres, pas ve zorlu kirleri etkili bir şekilde temizler.
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Ağır Hizmet Yağ Çözücüler</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Metal Yüzey Temizleyiciler</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Zemin Temizleme Solüsyonları</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Özel Amaçlı Leke Çıkarıcılar</span>
-                    </li>
-                  </ul>
+              {[
+                {
+                  title: "Endüstriyel Temizleyiciler",
+                  desc: "Üretim tesisleri, atölyeler ve endüstriyel alanlar için özel formüle edilmiş, yüksek performanslı temizlik çözümleri. Yağ, gres, pas ve zorlu kirleri etkili bir şekilde temizler.",
+                  color: "from-primary/80 to-accent/80",
+                  items: [
+                    {
+                      name: "Ağır Hizmet Yağ Çözücüler",
+                      info: "Endüstriyel makinelerde ve zorlu ortamlarda biriken yağ ve kirleri hızlıca çözer. Yüksek performanslı formülüyle üretim hattınızın verimliliğini artırır."
+                    },
+                    {
+                      name: "Metal Yüzey Temizleyiciler",
+                      info: "Metal yüzeylerdeki pas, oksit ve kirleri etkili şekilde temizler. Korozyon önleyici özelliğiyle ekipman ömrünü uzatır."
+                    },
+                    {
+                      name: "Zemin Temizleme Solüsyonları",
+                      info: "Fabrika ve atölye zeminlerinde biriken inatçı kirleri ve yağları kolayca çıkarır. Kaymaz ve hijyenik yüzey sağlar."
+                    },
+                    {
+                      name: "Özel Amaçlı Leke Çıkarıcılar",
+                      info: "Endüstriyel lekeler için geliştirilmiş güçlü formül. Zorlu lekeleri yüzeye zarar vermeden temizler."
+                    }
+                  ]
+                },
+                {
+                  title: "Kurumsal Hijyen Ürünleri",
+                  desc: "Ofisler, oteller, restoranlar ve kurumsal alanlar için geliştirilen, markanızı yansıtan, hoş kokulu ve etkili hijyen ürünleri.",
+                  color: "from-blue-400 to-blue-600",
+                  items: [
+                    {
+                      name: "El Dezenfektanları ve Sabunlar",
+                      info: "Cilt dostu ve etkili formüllerle hijyen sağlar. Antibakteriyel özellikleriyle ofis ve ortak alanlarda güvenli kullanım sunar."
+                    },
+                    {
+                      name: "Yüzey Dezenfektanları",
+                      info: "Bakteri ve virüslere karşı güçlü koruma. Sık temas edilen yüzeylerde hijyen standartlarını yükseltir."
+                    },
+                    {
+                      name: "Çok Amaçlı Temizleyiciler",
+                      info: "Farklı yüzeylerde güvenle kullanılabilen, hoş kokulu ve etkili temizlik sağlayan ürünler."
+                    },
+                    {
+                      name: "Oda ve Çevre Koku Sistemleri",
+                      info: "Uzun süre kalıcı, ferahlatıcı kokularla ortam havasını tazeler. Kurumsal imajınızı güçlendirir."
+                    }
+                  ]
+                },
+                {
+                  title: "Tekstil ve Deri Kimyasalları",
+                  desc: "Tekstil ve deri sektörü için özel geliştirilmiş, üretim süreçlerini iyileştiren ve son ürün kalitesini artıran kimyasal çözümler.",
+                  color: "from-pink-400 to-yellow-400",
+                  items: [
+                    {
+                      name: "Özel Boyama Katkıları",
+                      info: "Canlı ve kalıcı renkler için geliştirilmiş katkı maddeleri. Boyama proseslerinde maksimum verim ve renk tutarlılığı sağlar."
+                    },
+                    {
+                      name: "Yumuşatıcılar ve Aprelar",
+                      info: "Tekstil ürünlerine yumuşaklık ve dayanıklılık kazandırır. Son üründe üstün kalite ve müşteri memnuniyeti sunar."
+                    },
+                    {
+                      name: "Su ve Leke İtici Kimyasallar",
+                      info: "Kumaş ve deriye su, yağ ve leke geçirmezlik özelliği kazandırır. Ürünlerin ömrünü ve kullanım kolaylığını artırır."
+                    },
+                    {
+                      name: "Deri Finish Ürünleri",
+                      info: "Deri yüzeylerde parlaklık, koruma ve estetik görünüm sağlar. Uzun ömürlü ve kaliteli sonuçlar sunar."
+                    }
+                  ]
+                },
+                {
+                  title: "Otomotiv Bakım Ürünleri",
+                  desc: "Oto yıkama, galeri ve servisler için markalı, yüksek performanslı ve koruyucu özellikli otomotiv bakım kimyasalları.",
+                  color: "from-amber-400 to-orange-500",
+                  items: [
+                    {
+                      name: "Şampuanlar ve Cilalar",
+                      info: "Araç yüzeyinde derinlemesine temizlik ve parlaklık sağlar. Boya koruma özelliğiyle aracınızın değerini korur."
+                    },
+                    {
+                      name: "İç Mekan Temizleyicileri",
+                      info: "Araç içi plastik, vinil ve kumaş yüzeylerde hijyen ve ferahlık sunar. Antibakteriyel ve hoş kokulu formüller."
+                    },
+                    {
+                      name: "Motor ve Parça Temizleyiciler",
+                      info: "Motor ve mekanik parçalardaki yağ, kir ve birikintileri etkili şekilde temizler. Performans ve bakım kolaylığı sağlar."
+                    },
+                    {
+                      name: "Koruyucu Kaplamalar",
+                      info: "Araç yüzeyini dış etkenlere karşı koruyan, uzun ömürlü ve su itici kaplama çözümleri."
+                    }
+                  ]
+                }
+              ].map((cat, idx) => (
+                <div key={idx} className={`relative group bg-gradient-to-br ${cat.color} p-1 rounded-2xl shadow-lg transition-transform hover:scale-105`}>
+                  <div className="bg-white rounded-2xl h-full p-7">
+                    <h3 className="text-2xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">{cat.title}</h3>
+                    <p className="text-muted-foreground mb-4 text-sm">{cat.desc}</p>
+                    <ul className="space-y-2">
+                      {cat.items.map((item, i) => (
+                        <li key={i} className="relative group">
+                          <details className="cursor-pointer">
+                            <summary className="flex items-center text-primary font-semibold hover:underline focus:outline-none">
+                              <span className="mr-2">•</span>{item.name}
+                            </summary>
+                            <div className="ml-6 mt-1 text-muted-foreground text-xs bg-accent/10 rounded p-2 shadow-inner animate-fade-in">
+                              {item.info}
+                            </div>
+                          </details>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-border">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Kurumsal Hijyen Ürünleri</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Ofisler, oteller, restoranlar ve kurumsal alanlar için geliştirilen, markanızı yansıtan, hoş kokulu ve etkili hijyen ürünleri.
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>El Dezenfektanları ve Sabunlar</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Yüzey Dezenfektanları</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Çok Amaçlı Temizleyiciler</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Oda ve Çevre Koku Sistemleri</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-border">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Tekstil ve Deri Kimyasalları</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Tekstil ve deri sektörü için özel geliştirilmiş, üretim süreçlerini iyileştiren ve son ürün kalitesini artıran kimyasal çözümler.
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Özel Boyama Katkıları</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Yumuşatıcılar ve Aprelar</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Su ve Leke İtici Kimyasallar</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Deri Finish Ürünleri</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-border">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Otomotiv Bakım Ürünleri</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Oto yıkama, galeri ve servisler için markalı, yüksek performanslı ve koruyucu özellikli otomotiv bakım kimyasalları.
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Şampuanlar ve Cilalar</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>İç Mekan Temizleyicileri</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Motor ve Parça Temizleyiciler</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">•</span>
-                      <span>Koruyucu Kaplamalar</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -248,34 +268,47 @@ const CustomProducts = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md relative">
-                <div className="absolute -top-5 -left-5 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">1</div>
-                <h3 className="text-xl font-bold mb-4 pt-2">İhtiyaç Analizi</h3>
-                <p className="text-muted-foreground">
-                  İşletmenizin spesifik ihtiyaçlarını, marka değerlerinizi ve hedeflerinizi derinlemesine analiz ediyoruz.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md relative">
-                <div className="absolute -top-5 -left-5 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">2</div>
-                <h3 className="text-xl font-bold mb-4 pt-2">Özel Formülasyon</h3>
-                <p className="text-muted-foreground">
-                  Ar-Ge laboratuvarımızda, ihtiyaçlarınıza özel formüller geliştiriyor ve test ediyoruz.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md relative">
-                <div className="absolute -top-5 -left-5 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">3</div>
-                <h3 className="text-xl font-bold mb-4 pt-2">Marka Entegrasyonu</h3>
-                <p className="text-muted-foreground">
-                  Ürünün renk, koku ve etiket tasarımını markanızla tamamen uyumlu hale getiriyoruz.
-                </p>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-md relative">
-                <div className="absolute -top-5 -left-5 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">4</div>
-                <h3 className="text-xl font-bold mb-4 pt-2">Üretim ve Teslimat</h3>
-                <p className="text-muted-foreground">
-                  Yüksek kalite standartlarında üretim yapıyor ve ürünlerinizi zamanında teslim ediyoruz.
-                </p>
-              </div>
+              {[
+                {
+                  step: 1,
+                  title: "İhtiyaç Analizi",
+                  desc: "İşletmenizin hedefleri, marka değerleri ve sektörel gereksinimleri detaylıca analiz edilir. Böylece size en uygun çözümün temeli atılır.",
+                  color: "from-primary/80 to-accent/80",
+                  icon: "🔍"
+                },
+                {
+                  step: 2,
+                  title: "Ar-Ge & Özel Formülasyon",
+                  desc: "Uzman ekibimiz ve Ar-Ge laboratuvarımızda, ihtiyaçlarınıza özel formüller geliştirilir ve test edilir. Performans ve sürdürülebilirlik ön planda tutulur.",
+                  color: "from-green-400 to-green-600",
+                  icon: "🧪"
+                },
+                {
+                  step: 3,
+                  title: "Marka Entegrasyonu",
+                  desc: "Ürünün renk, koku ve etiket tasarımı markanızla bütünleşecek şekilde özelleştirilir. Her detayda kurumsal kimliğiniz yansıtılır.",
+                  color: "from-pink-400 to-yellow-400",
+                  icon: "🎨"
+                },
+                {
+                  step: 4,
+                  title: "Üretim & Teslimat",
+                  desc: "Yüksek kalite standartlarında üretim yapılır, ürünleriniz zamanında ve güvenle teslim edilir. Süreç boyunca şeffaf iletişim sağlanır.",
+                  color: "from-blue-400 to-blue-600",
+                  icon: "🚚"
+                }
+              ].map((item, idx) => (
+                <div key={idx} className={`relative group bg-gradient-to-br ${item.color} p-1 rounded-2xl shadow-lg transition-transform hover:scale-105`}>
+                  <div className="bg-white rounded-2xl h-full p-7 flex flex-col items-center text-center">
+                    <div className="flex items-center justify-center mb-4">
+                      <span className="text-3xl md:text-4xl mr-2">{item.icon}</span>
+                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-lg shadow-md border-2 border-accent">{item.step}</span>
+                    </div>
+                    <h3 className="text-lg font-bold mb-2 text-primary group-hover:text-accent transition-colors">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
