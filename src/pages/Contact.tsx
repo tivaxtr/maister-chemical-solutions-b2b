@@ -1,4 +1,3 @@
-
 import { useState, FormEvent } from "react";
 import Navbar from "../components/ui/navbar";
 import Footer from "../components/layout/Footer";
@@ -222,7 +221,7 @@ const Contact = () => {
                       <Mail className="w-6 h-6 text-primary mt-1 mr-4" />
                       <div>
                         <h3 className="font-medium">E-posta Adresimiz</h3>
-                        <p className="text-gray-600">info@maister.com</p>
+                        <p className="text-gray-600">info@beijchemicals.com</p>
                       </div>
                     </div>
                     
@@ -230,8 +229,7 @@ const Contact = () => {
                       <Phone className="w-6 h-6 text-primary mt-1 mr-4" />
                       <div>
                         <h3 className="font-medium">Telefon Numaramız</h3>
-                        <p className="text-gray-600">+90 (212) 555 1234</p>
-                        <p className="text-gray-600">+90 (212) 555 5678</p>
+                        <p className="text-gray-600">+90 (532) 131 95 95</p>
                       </div>
                     </div>
                     
@@ -240,8 +238,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-medium">Adresimiz</h3>
                         <p className="text-gray-600">
-                          Maslak Mah. Büyükdere Cad. No:123<br />
-                          Sarıyer, İstanbul, Türkiye
+                          Cumhuriyet Mah. Okul Cad. No:40 İç Kapı No:2<br />
+                          Kartal, İstanbul, Türkiye
                         </p>
                       </div>
                     </div>

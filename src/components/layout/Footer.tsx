@@ -14,11 +14,11 @@ const Footer = () => {
             </p>
             <div className="flex items-center mt-4">
               <Mail className="h-5 w-5 mr-2" />
-              <span>info@maister.com</span>
+              <span>info@beijchemicals.com</span>
             </div>
             <div className="flex items-center mt-2">
               <Phone className="h-5 w-5 mr-2" />
-              <span>+90 (212) 555 1234</span>
+              <span>+90 (532) 131 95 95</span>
             </div>
           </div>
           
@@ -52,11 +52,11 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Maister'i Keşfedin</h3>
             <p className="mb-4">
-              Endüstriyel kimya konusunda 20 yıllık tecrübe. İnovasyon ve kalite odaklı çözümler.
+              Endüstriyel kimya konusunda uzman çözüm ortağınız. İnovasyon ve kalite odaklı çözümler.
             </p>
             <p>
-              Adres: Maslak Mah. Büyükdere Cad. No:123 <br />
-              Sarıyer, İstanbul, Türkiye
+              Adres: Cumhuriyet Mah. Okul Cad. No:40 İç Kapı No:2 <br />
+              Kartal, İstanbul, Türkiye
             </p>
           </div>
         </div>
