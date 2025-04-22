@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from "../components/ui/navbar";
 import Footer from "../components/layout/Footer";
@@ -126,24 +125,42 @@ const Blog = () => {
     }
   ];
 
+  const [expanded, setExpanded] = React.useState<number | null>(null);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
         <div className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-8 tracking-tight">Blog</h1>
-            <div className="grid grid-cols-1 gap-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-8 tracking-tight text-center drop-shadow">Blog</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {blogPosts.map((post) => (
-                <article key={post.id} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                  <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">{post.title}</h2>
-                  <p className="text-muted-foreground mb-4">{post.date}</p>
-                  <div className="prose prose-lg max-w-none">
-                    {post.content.split('\n\n').map((paragraph, idx) => (
-                      <p key={idx} className="mb-4 text-muted-foreground">
-                        {paragraph}
-                      </p>
-                    ))}
+                <article
+                  key={post.id}
+                  className={`relative bg-gradient-to-br from-white via-secondary/40 to-primary/5 rounded-2xl shadow-xl p-8 flex flex-col hover:scale-105 transition-transform group border border-primary/10 ${expanded === post.id ? 'ring-2 ring-accent' : ''}`}
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-semibold">Kimya Blog</span>
+                    <span className="text-xs text-muted-foreground">{post.date}</span>
+                  </div>
+                  <h2 className="text-xl md:text-2xl font-bold text-primary mb-2 group-hover:text-accent transition-colors line-clamp-2">{post.title}</h2>
+                  <p className="text-muted-foreground mb-4 line-clamp-3">{post.excerpt}</p>
+                  <button
+                    className="text-accent font-semibold text-sm underline underline-offset-4 mb-4 self-start hover:text-primary transition-colors"
+                    onClick={() => setExpanded(expanded === post.id ? null : post.id)}
+                  >
+                    {expanded === post.id ? 'Kapat' : 'Devamını Oku'}
+                  </button>
+                  {expanded === post.id && (
+                    <div className="prose prose-lg max-w-none animate-fade-in border-t border-accent/20 pt-4 mt-2">
+                      {post.content.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  )}
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-primary text-white w-12 h-12 flex items-center justify-center rounded-full text-3xl shadow-lg border-4 border-white animate-bounce">
+                    <span>✍️</span>
                   </div>
                 </article>
               ))}

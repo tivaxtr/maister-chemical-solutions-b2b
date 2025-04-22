@@ -24,25 +24,41 @@ const Contact = () => {
     }));
   };
   
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // In a real implementation, you would send the form data to your server here
-    // For demo purposes, we'll just simulate a successful submission
+    setIsSubmitted(false);
+    setIsError(false);
     try {
-      console.log("Form submitted:", formData);
-      setIsSubmitted(true);
-      setIsError(false);
-      // Reset form after successful submission
-      setFormData({
-        name: "",
-        company: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: ""
+      const response = await fetch("https://formspree.io/f/xldbeegb", {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message
+        })
       });
+      if (response.ok) {
+        setIsSubmitted(true);
+        setIsError(false);
+        setFormData({
+          name: "",
+          company: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        setIsError(true);
+      }
     } catch (error) {
-      console.error("Error submitting form:", error);
       setIsError(true);
     }
   };

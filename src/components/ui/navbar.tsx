@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -21,12 +20,12 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-1 bg-primary/5 rounded-full px-2 py-1 shadow-sm border border-primary/10">
             {[
               { to: "/", label: "Ana Sayfa" },
-              { to: "/about", label: "Hakkımızda" },
               { to: "/blog", label: "Blog" },
               { to: "/custom-products", label: "Özel Ürünler" },
               { to: "/efficiency-projects", label: "Verimlilik Projeleri" },
               { to: "/private-label", label: "Private Label" },
               { to: "/raw-materials", label: "Hammaddeler" },
+              { to: "/about", label: "Hakkımızda" },
               { to: "/contact", label: "İletişim" },
             ].map((item) => (
               <Link
@@ -53,12 +52,12 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {[
               { to: "/", label: "Ana Sayfa" },
-              { to: "/about", label: "Hakkımızda" },
               { to: "/blog", label: "Blog" },
               { to: "/custom-products", label: "Özel Ürünler" },
               { to: "/efficiency-projects", label: "Verimlilik Projeleri" },
               { to: "/private-label", label: "Private Label" },
               { to: "/raw-materials", label: "Hammaddeler" },
+              { to: "/about", label: "Hakkımızda" },
               { to: "/contact", label: "İletişim" },
             ].map((item) => (
               <Link
