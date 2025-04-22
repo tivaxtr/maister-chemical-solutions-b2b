@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -21,6 +22,7 @@ const Navbar = () => {
             {[
               { to: "/", label: "Ana Sayfa" },
               { to: "/about", label: "Hakkımızda" },
+              { to: "/blog", label: "Blog" },
               { to: "/custom-products", label: "Özel Ürünler" },
               { to: "/efficiency-projects", label: "Verimlilik Projeleri" },
               { to: "/private-label", label: "Private Label" },
@@ -52,6 +54,7 @@ const Navbar = () => {
             {[
               { to: "/", label: "Ana Sayfa" },
               { to: "/about", label: "Hakkımızda" },
+              { to: "/blog", label: "Blog" },
               { to: "/custom-products", label: "Özel Ürünler" },
               { to: "/efficiency-projects", label: "Verimlilik Projeleri" },
               { to: "/private-label", label: "Private Label" },

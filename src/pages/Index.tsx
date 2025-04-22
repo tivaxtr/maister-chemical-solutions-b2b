@@ -6,6 +6,7 @@ import Services from "../components/home/Services";
 import Projects from "../components/home/Projects";
 import Testimonials from "../components/home/Testimonials";
 import ContactCTA from "../components/home/ContactCTA";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -39,25 +40,17 @@ const Index = () => {
                 {
                   title: "Private Label Kimyasal Ürünlerle Markanızı Nasıl Büyütürsünüz?",
                   desc: "Kendi markanızla kimyasal ürün satmanın avantajları, private label projelerinde dikkat edilmesi gerekenler ve pazarda öne çıkmak için stratejiler."
-                },
-                {
-                  title: "Su Yönetimi ve Endüstride Su Tasarrufu Çözümleri",
-                  desc: "Endüstriyel tesislerde su tüketimini azaltmanın yolları, su yönetimi projeleri ve Maister'ın sunduğu yenilikçi çözümler."
-                },
-                {
-                  title: "Kimyasal Ürünlerde Kalite Standartları ve Sertifikasyon",
-                  desc: "Kimyasal ürünlerde kalite yönetimi, uluslararası sertifikasyon süreçleri ve güvenilir tedarikçi seçiminin önemi."
-                },
-                {
-                  title: "Ar-Ge'nin Kimya Sektöründeki Yeri ve Geleceği",
-                  desc: "Kimya sektöründe Ar-Ge yatırımlarının önemi, inovasyonun rekabet avantajına etkisi ve Maister'ın Ar-Ge vizyonu."
                 }
               ].map((blog, idx) => (
-                <div key={idx} className="bg-white rounded-2xl shadow-lg p-8 flex flex-col hover:scale-105 transition-transform">
-                  <h3 className="text-xl font-bold text-primary mb-3">{blog.title}</h3>
+                <Link
+                  key={idx}
+                  to="/blog"
+                  className="bg-white rounded-2xl shadow-lg p-8 flex flex-col hover:scale-105 transition-transform group"
+                >
+                  <h3 className="text-xl font-bold text-primary mb-3 group-hover:underline">{blog.title}</h3>
                   <p className="text-muted-foreground text-sm mb-2">{blog.desc}</p>
                   <span className="inline-block mt-auto text-accent font-semibold text-xs tracking-wide">Devamını Oku</span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
